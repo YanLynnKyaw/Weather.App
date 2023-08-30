@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #37474f;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;   
+    height: 400px;
+    background-color: #232931;
+    color: rgb(255, 255, 255);
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.l-info{
+   
+    width: 250px;
+    height: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    background: url("w01.jpg");
+    background-position: center;
+    background-size: cover;
+    transform: scale(1.03) perspective(200px);
+    cursor: pointer;
+    box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.2);
+    transition: all 0.6s ease;
+    border-radius: 25px;
+}
+
+.l-info:hover{
+    transform: scale(1.1) perspective(2500px) rotateY(5deg);
+}
+
+.pic-gradient{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, #4656b5 10%,#071831 100%);
+    border-radius: 25px;
+    opacity: 0.5;
+}
+
+.tdy-info{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.tdy-weather{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    bottom: 20px;
+    left: 20px;
+}
+
+.tdy-weather .bx{
+    font-size: 4.6rem;
+}
+
+.weather-temp{
+    font-weight: 700;
+    font-size: 3.5rem;
+}
+
+.r-info{
+    float: right;
+    position: relative;
+    height: 100%;
+    padding-top: 25px;
+}
+
+.day-info{
+    padding: 25px 35px;
+    display: flex;
+    flex-direction: column;
+}
+.day-info div:not(:last-child){
+    margin-bottom: 6px;
+}
+.day-info div .title{
+    font-weight: 700;
+}
+.day-info div .value{
+    float: right;
+}
+
+.day-list{
+    display: flex;
+    list-style: none;
+    margin: 10px 35px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+}
+
+.day-list li{
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+.day-list li .bx{
+    margin-bottom: 5px;
+    font-size: 2rem;
+}
+
+.day-list li:hover{
+    transform: scale(1.1);
+    background: #becde3;
+    color: #222831;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.btn-container{
+    padding: 25px 35px;
+}
+
+.loc-btn{
+    outline: none;
+    width: 100%;
+    font-weight: 700;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    background: #1f308f;
+    color: #becde3;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    transition: all 0.3s ease;
+}
+.loc-btn:hover{
+    background: #1a237e;
+}
+
+
+
+@media screen and (max-width:480px){
+    .hid li{
+        display: block;
+        visibility: hidden;
+        display: none;
+    }
+    .l-info{
+        width: 160px;
+
+    }
+    .weather-temp{
+        font-weight: 500;
+        font-size: 2.5rem;
+    }
+    .tdy-weather .bx{
+        font-size: 3.6rem;
+    }
+    #tdyW{
+        font-size: 1rem ;
+    }
+
+    .r-info{
+        width: 210px;
+    }
+    .title{
+        font-size: 0.8rem;
+    }
+    .value{
+        font-size: 0.8rem;
+    }
+    #hid{
+        visibility: hidden;
+        display: none;
+       }
+    .day-list{
+        padding: 6px;
+    }
+    .loc-btn{
+        padding: 7px;
+    }
+}
+
+@media screen and (max-width:460px)
+
+{
+    .container{
+       height: 300px;
+       width: 300px;
+    }
+    .l-info{
+        width: 130px;
+    }
+    .tdy-info h2{
+        font-weight: 500;
+        
+    }
+
+    .tdy-info span{
+        font-size: 0.7rem;
+    }
+    .tdy-info div{
+        font-size: 0.7rem;
+    }
+    .weather-temp{
+        font-weight: 500;
+        font-size: 1.7rem;
+    }
+    .tdy-weather .bx{
+        font-size: 2rem;
+    }
+    #tdyW{
+        font-size: 0.9rem ;
+    }
+
+    .r-info{
+        width: 150px;
+        padding-top: 10px;
+    }
+    .day-list{
+        width: 90px;
+    }
+    .day-info{
+        padding: 10px;
+        padding-left: 20px;
+        
+    }
+
+    .title{
+        font-size: 0.6rem;
+    }
+    .value{
+        font-size: 0.6rem;
+    }
+    .day-list span{
+        font-size: 0.6rem;
+    }
+    .day-list i{
+        font-size: 0.6rem;
+        
+    }
+
+    .day-list li{
+        padding: 5px;
+    }
+    #hid{
+        visibility: hidden;
+        display: none;
+       }
+    .day-list{
+        padding: 4px;
+    }
+    .btn-container{
+        padding: 20px 10px;
+        padding-left: 25px;
+        
+    }
+    .loc-btn{
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 0.48rem;
+    }
+}
